@@ -1,110 +1,47 @@
 # Twitter-Sentiment-Analysis-Using-Neural-Networks
 
-This project performs binary sentiment classification on tweets using a deep learning model built with Keras and TensorFlow. It aims to classify tweets as positive or negative based on their content, using an LSTM-based neural network.
-📂 Project Structure
-
-    1_lft_Twitter_Sentiment_Analysis_Using_NN_😎(1).ipynb – Main Jupyter Notebook for preprocessing, model building, training, and evaluation.
-
-    tweets.csv – Input dataset containing tweets and corresponding sentiment labels.
-
-📊 Dataset Description
-
-The dataset contains tweets labeled with:
-
-    0 → Negative sentiment
-
-    1 → Positive sentiment
-
-Each entry has:
-
-    Text: The tweet content
-
-    Target: Sentiment label (0 or 1)
-
-⚙️ Installation
-
-    Clone this repository
-
-git clone https://github.com/your-username/twitter-sentiment-nn.git
-cd twitter-sentiment-nn
-
-Create and activate a virtual environment (optional but recommended)
-
-python -m venv env
-source env/bin/activate  # On Windows: env\Scripts\activate
-
-Install the required libraries
-
-pip install -r requirements.txt
-
-If requirements.txt is not provided, install manually:
-
-pip install numpy pandas nltk matplotlib tensorflow scikit-learn
-
-Download NLTK stopwords (first-time use only)
-Inside the notebook or Python shell:
-
-    import nltk
-    nltk.download('stopwords')
-
-🧹 Preprocessing Steps
-
-    Lowercase text conversion
-
-    Removal of:
-
-        URLs
-
-        Punctuation
-
-        Digits and special characters
-
-    Stopword filtering using NLTK
-
-    Tokenization and sequence padding using Keras' Tokenizer
-
-🧠 Model Architecture
-
-    Embedding Layer: Converts tokens into dense vectors
-
-    LSTM Layer: Captures temporal and semantic relationships
-
-    Dense Layers:
-
-        Fully connected layers
-
-        Final sigmoid activation for binary classification
-
-📈 Training & Evaluation
-
-    Model trained with:
-
-        Binary cross-entropy loss
-
-        Adam optimizer
-
-        20% validation split
-
-    Metrics:
-
-        Accuracy and loss plotted across epochs
-
-        Final evaluation on unseen test data
-
-📌 Sample Output
-
-Training Accuracy: 92%
-Validation Accuracy: 89%
-Test Accuracy: 90%
-
-Plots of training vs. validation accuracy and loss are generated at the end of the notebook.
-🚀 Future Improvements
-
-    Use more advanced architectures like BERT or transformers
-
-    Expand to multi-class sentiment (e.g., neutral)
-
-    Deploy model with a web API or web app (e.g., using Flask or FastAPI)
 
 **Dataset Link:**
 https://www.kaggle.com/datasets/ferno2/training1600000processednoemoticoncsv
+
+
+This project focuses on performing sentiment analysis on tweets using a deep learning model built with Keras and TensorFlow. The main objective is to classify tweets as positive or negative, leveraging text preprocessing techniques and a neural network classifier.
+📌 Key Features:
+
+    Dataset: A CSV file containing tweets with labeled sentiments (0 for negative, 1 for positive).
+
+    Text Preprocessing:
+
+        Lowercasing, removing URLs, punctuation, and stopwords.
+
+        Tokenization and padding of tweet sequences for model input.
+
+    Model Architecture:
+
+        Embedding layer to represent words in dense vector space.
+
+        LSTM (Long Short-Term Memory) layer for learning temporal dependencies.
+
+        Dense layers with sigmoid activation for binary classification.
+
+    Training & Evaluation:
+
+        Model trained on processed tweets with validation split.
+
+        Accuracy and loss metrics visualized over epochs.
+
+🛠️ Tools & Libraries:
+
+    Python (Jupyter Notebook)
+
+    Keras & TensorFlow
+
+    NLTK & re (for text processing)
+
+    Matplotlib (for visualization)
+
+📊 Output:
+
+    Training accuracy and loss plotted.
+
+    Final evaluation on test data.
